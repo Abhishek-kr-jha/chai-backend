@@ -1,11 +1,8 @@
-
+import { response } from "express";
 import { asynHandler } from "../utils/asynchandler.js";
-import {ApiError} from "../utils/ApiError.js"
-import { User } from "../models/user.models.js";
-import {uploadOnCloudinary} from "../utils/cloudinary.js"
-import { ApiResponse } from "../utils/ApiResponse.js";
 
 const registerUser = asynHandler( async (req,res)=>{
+<<<<<<< HEAD
     // get user details from frontend
     //validation - not empty
     // Check if user already exists:username ,email
@@ -79,6 +76,11 @@ const registerUser = asynHandler( async (req,res)=>{
     new ApiResponse(200, createdUser , "user regeistered successfully")
    )
    
+=======
+     response.status(200).json({
+        message:"Ok"
+    })
+>>>>>>> parent of d699fa1 (add register controllers)
 })
 
 export {registerUser}
